@@ -8,11 +8,22 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    // 四則演算を行うときの状態
+    enum Status {
+        case plus
+        case minus
+        case times
+        case divide
+        case none
+    }
         
     @IBOutlet weak var resultLabel: UILabel!
     
     
     let numbers: Array<String> = ["0","1","2","3","4","5","6","7","8","9"]
+    
+    var status: Status = .none
     
     // １番目の入力値ラベル
     var numberLabel1: String = ""
@@ -44,8 +55,17 @@ class ViewController: UIViewController {
     }
     
     func notResult() {
-        print("notResult")
         return
+    }
+    
+    
+    func alreadyInmputFirstNuber() {
+        // 1回目の入力値が既に入っていた場合、notInputが走る
+        if numberLabel1 == "" {
+            notInput()
+        }
+        
+        numberLabel1 = String(firstNumber)
     }
     
     // MARK: functionButtons
@@ -54,34 +74,44 @@ class ViewController: UIViewController {
         numberLabel2 = ""
         firstNumber = 0
         nextNumber = 0
+        status = .none
         resultLabel.text = numbers[0]
     }
     
     @IBAction func resultButton(_ sender: Any) {
-        print("resultButton")
         
-        resultLabel.text = String(firstNumber + nextNumber)
-        
+        switch status {
+        case .plus:
+            resultLabel.text = String(firstNumber + nextNumber)
+        case .minus:
+            resultLabel.text = String(firstNumber - nextNumber)
+        case .times:
+            resultLabel.text = String(firstNumber * nextNumber)
+        case .divide:
+            resultLabel.text = String(firstNumber / nextNumber)
+        default:
+            break
+        }
         
     }
     
     @IBAction func plusButton(_ sender: Any) {
-        
-        numberLabel1 = String(firstNumber)
-        
-        notInput()
-    
+        alreadyInmputFirstNuber()
+        status = .plus
     }
     
     @IBAction func minusButton(_ sender: Any) {
-        notInput()
+        alreadyInmputFirstNuber()
+        status = .minus
     }
     @IBAction func timesButton(_ sender: Any) {
-        notInput()
+        alreadyInmputFirstNuber()
+        status = .times
     }
     
     @IBAction func divideButton(_ sender: Any) {
-        notInput()
+        alreadyInmputFirstNuber()
+        status = .divide
     }
     
     // 小数点
