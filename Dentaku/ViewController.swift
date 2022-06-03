@@ -119,6 +119,18 @@ class ViewController: UIViewController {
     }
     
     // MARK: numbersButton
+    @IBAction func zero(_ sender: Any) {
+        if numberLabel1 == "" {
+            firstNumber = 0
+            numberLabel1 += numbers[0]
+            resultLabel.text = numberLabel1
+        } else if numberLabel1 == String(firstNumber) {
+            nextNumber = 0
+            numberLabel2 += numbers[0]
+            resultLabel.text = numberLabel2
+        }
+    }
+    
     @IBAction func one(_ sender: Any) {
         
         if numberLabel1 == "" {
