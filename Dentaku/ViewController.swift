@@ -36,8 +36,9 @@ class ViewController: UIViewController {
     var firstNumber: Double = 0.0
     // 入力後の次の入力値
     var nextNumber: Double = 0.0
-    
-    
+
+    var pointMode :Bool = false
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -83,6 +84,8 @@ class ViewController: UIViewController {
         switch status {
         case .plus:
             resultLabel.text = String(firstNumber + nextNumber)
+            firstNumber = firstNumber + nextNumber
+
         case .minus:
             resultLabel.text = String(firstNumber - nextNumber)
         case .times:
@@ -92,7 +95,8 @@ class ViewController: UIViewController {
         default:
             break
         }
-        
+        status = .none
+
     }
     
     @IBAction func plusButton(_ sender: Any) {
@@ -116,8 +120,36 @@ class ViewController: UIViewController {
     
     // 小数点
     @IBAction func pointButton(_ sender: Any) {
+        pointMode = !pointMode
+        if pointMode {
+            resultLabel.text = String(format: "%.0f", firstNumber) + "."
+        }
+
     }
-    
+
+
+    @IBAction func numericDown(_ sender: Any) {
+        if let button  = sender as? UIButton{
+            print("tag=\(button.tag)")
+            if pointMode {
+                let shosu = firstNumber - floor(firstNumber)
+                var i = 1
+                var x = shosu
+                while x > 0.0 {
+                    x = x * 10 - floor (x * 10)
+                    i += 1
+                }
+                firstNumber = floor(firstNumber) + shosu  + Double(button.tag)/pow(10.0,Double(i))
+                resultLabel.text = String(format: "%f", firstNumber)
+            }else {
+                firstNumber *= 10
+                firstNumber += Double(button.tag)
+                resultLabel.text = String(format: "%.0f", firstNumber)
+            }
+        }
+    }
+
+#if false
     // MARK: numbersButton
     @IBAction func zero(_ sender: Any) {
         if numberLabel1 == "" {
@@ -238,4 +270,5 @@ class ViewController: UIViewController {
             resultLabel.text = numberLabel2
         }
     }
+    #endif
 }
