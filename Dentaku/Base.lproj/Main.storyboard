@@ -104,7 +104,7 @@
                                     <action selector="pointButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3hg-Aw-7fW"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yRh-ay-a9X">
+                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yRh-ay-a9X">
                                 <rect key="frame" x="70" y="480" width="40" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="2HL-gU-uZ0"/>
@@ -112,10 +112,10 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="7"/>
                                 <connections>
-                                    <action selector="seven:" destination="BYZ-38-t0r" eventType="touchUpInside" id="daj-8E-cGj"/>
+                                    <action selector="numberOftype:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hPQ-LA-NEb"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HYx-Bp-AMS">
+                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HYx-Bp-AMS">
                                 <rect key="frame" x="155" y="480" width="40" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="CMx-M5-ag2"/>
@@ -123,10 +123,10 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="8"/>
                                 <connections>
-                                    <action selector="eight:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OeA-ED-mEJ"/>
+                                    <action selector="numberOftype:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P31-im-tRh"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m66-fY-b2J">
+                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m66-fY-b2J">
                                 <rect key="frame" x="249" y="480" width="40" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="wgI-Yk-EYP"/>
@@ -134,10 +134,10 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="9"/>
                                 <connections>
-                                    <action selector="nine:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2eb-7J-jdB"/>
+                                    <action selector="numberOftype:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dtl-ap-yzp"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RMh-y1-iS2">
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RMh-y1-iS2">
                                 <rect key="frame" x="70" y="561" width="40" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="kWA-vE-uss"/>
@@ -145,10 +145,10 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="4"/>
                                 <connections>
-                                    <action selector="four:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VXd-DP-Jyg"/>
+                                    <action selector="numberOftype:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yNI-Gg-H2R"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3GF-SR-d58">
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3GF-SR-d58">
                                 <rect key="frame" x="155" y="561" width="40" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="L18-BK-GEw"/>
@@ -156,10 +156,10 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="5"/>
                                 <connections>
-                                    <action selector="five:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qim-qo-Qh5"/>
+                                    <action selector="numberOftype:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5H4-jF-TPf"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FW1-HW-Tzk">
+                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FW1-HW-Tzk">
                                 <rect key="frame" x="249" y="561" width="40" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="HLI-jA-moC"/>
@@ -167,10 +167,10 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="6"/>
                                 <connections>
-                                    <action selector="six:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xsa-03-fNv"/>
+                                    <action selector="numberOftype:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tha-H6-6Kg"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WpX-vR-ovv">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WpX-vR-ovv">
                                 <rect key="frame" x="70" y="642" width="40" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="Unn-MA-JAU"/>
@@ -178,10 +178,10 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="1"/>
                                 <connections>
-                                    <action selector="one:" destination="BYZ-38-t0r" eventType="touchUpInside" id="na1-a3-nl9"/>
+                                    <action selector="numberOftype:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SPB-0a-mkm"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3xv-Bi-618">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3xv-Bi-618">
                                 <rect key="frame" x="155" y="642" width="40" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="1pU-aN-T5T"/>
@@ -189,10 +189,10 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="2"/>
                                 <connections>
-                                    <action selector="two:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CmO-iL-3Mb"/>
+                                    <action selector="numberOftype:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tmL-7K-zYa"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c99-WD-krW">
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c99-WD-krW">
                                 <rect key="frame" x="249" y="642" width="40" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="dYQ-lr-aLu"/>
@@ -200,7 +200,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="3"/>
                                 <connections>
-                                    <action selector="three:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xqy-yD-IBl"/>
+                                    <action selector="numberOftype:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J99-fj-cNF"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nao-kh-f27">
@@ -211,7 +211,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="0"/>
                                 <connections>
-                                    <action selector="zero:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZWl-zo-V6u"/>
+                                    <action selector="numberOftype:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AGy-tP-dPb"/>
                                 </connections>
                             </button>
                         </subviews>

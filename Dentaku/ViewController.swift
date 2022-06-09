@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  Dentaku
+//
 //
 //  Created by Mina on 2022/05/28.
 //
@@ -29,8 +29,6 @@ class ViewController: UIViewController {
     var numberLabel1: String = ""
     // 2番目の入力値ラベル
     var numberLabel2: String = ""
-    
-    var resultTotalString: String?
     
     // 最初の入力値
     var firstNumber: Double = 0.0
@@ -80,19 +78,29 @@ class ViewController: UIViewController {
     
     @IBAction func resultButton(_ sender: Any) {
         
+        // 数値を何も入力していない状態で"="を押すとnotInput()が走る
+        if firstNumber ==  0.0 && nextNumber ==  0.0 {
+            notInput()
+        }
+        
+        let resultTotalString: String?
+        
         switch status {
         case .plus:
             resultLabel.text = String(firstNumber + nextNumber)
+          //  resultTotalString = resultLabel.text
         case .minus:
             resultLabel.text = String(firstNumber - nextNumber)
+          //  resultTotalString = resultLabel.text
         case .times:
             resultLabel.text = String(firstNumber * nextNumber)
+         //   resultTotalString = resultLabel.text
         case .divide:
             resultLabel.text = String(firstNumber / nextNumber)
+         //   resultTotalString = resultLabel.text
         default:
             break
         }
-        
     }
     
     @IBAction func plusButton(_ sender: Any) {
@@ -119,123 +127,9 @@ class ViewController: UIViewController {
     }
     
     // MARK: numbersButton
-    @IBAction func zero(_ sender: Any) {
-        if numberLabel1 == "" {
-            firstNumber = 0
-            numberLabel1 += numbers[0]
-            resultLabel.text = numberLabel1
-        } else if numberLabel1 == String(firstNumber) {
-            nextNumber = 0
-            numberLabel2 += numbers[0]
-            resultLabel.text = numberLabel2
-        }
-    }
-    
-    @IBAction func one(_ sender: Any) {
+    @IBAction func numberOftype(_ sender: UIButton) {
         
-        if numberLabel1 == "" {
-            firstNumber = 1
-            numberLabel1 += numbers[1]
-            resultLabel.text = numberLabel1
-        } else if numberLabel1 == String(firstNumber) {
-            nextNumber = 1
-            numberLabel2 += numbers[1]
-            resultLabel.text = numberLabel2
-        }
-    }
-    
-    @IBAction func two(_ sender: Any) {
+        print(sender.tag)
         
-        if numberLabel1 == "" {
-            firstNumber = 2
-            numberLabel1 += numbers[2]
-            resultLabel.text = numberLabel1
-        } else if numberLabel1 == String(firstNumber) {
-            nextNumber = 2
-            numberLabel2 += numbers[2]
-            resultLabel.text = numberLabel2
-        }
-    }
-    
-    @IBAction func three(_ sender: Any) {
-        if numberLabel1 == "" {
-            firstNumber = 3
-            numberLabel1 += numbers[3]
-            resultLabel.text = numberLabel1
-        } else if numberLabel1 == String(firstNumber) {
-            nextNumber = 3
-            numberLabel2 += numbers[3]
-            resultLabel.text = numberLabel2
-        }
-    }
-    
-    @IBAction func four(_ sender: Any) {
-        if numberLabel1 == "" {
-            firstNumber = 4
-            numberLabel1 += numbers[4]
-            resultLabel.text = numberLabel1
-        } else if numberLabel1 == String(firstNumber) {
-            nextNumber = 4
-            numberLabel2 += numbers[4]
-            resultLabel.text = numberLabel2
-        }
-    }
-    
-    @IBAction func five(_ sender: Any) {
-        if numberLabel1 == "" {
-            firstNumber = 5
-            numberLabel1 += numbers[5]
-            resultLabel.text = numberLabel1
-        } else if numberLabel1 == String(firstNumber) {
-            nextNumber = 5
-            numberLabel2 += numbers[5]
-            resultLabel.text = numberLabel2
-        }
-    }
-    @IBAction func six(_ sender: Any) {
-        if numberLabel1 == "" {
-            firstNumber = 6
-            numberLabel1 += numbers[6]
-            resultLabel.text = numberLabel1
-        } else if numberLabel1 == String(firstNumber) {
-            nextNumber = 6
-            numberLabel2 += numbers[6]
-            resultLabel.text = numberLabel2
-        }
-    }
-    @IBAction func seven(_ sender: Any) {
-        if numberLabel1 == "" {
-            firstNumber = 7
-            numberLabel1 += numbers[7]
-            resultLabel.text = numberLabel1
-        } else if numberLabel1 == String(firstNumber) {
-            nextNumber = 7
-            numberLabel2 += numbers[7]
-            resultLabel.text = numberLabel2
-        }
-    }
-    
-    @IBAction func eight(_ sender: Any) {
-        if numberLabel1 == "" {
-            firstNumber = 8
-            numberLabel1 += numbers[8]
-            resultLabel.text = numberLabel1
-        } else if numberLabel1 == String(firstNumber) {
-            nextNumber = 8
-            numberLabel2 += numbers[8]
-            resultLabel.text = numberLabel2
-        }
-    }
-    
-    @IBAction func nine(_ sender: Any) {
-        if numberLabel1 == "" {
-            firstNumber = 9
-            numberLabel1 += numbers[9]
-            resultLabel.text = numberLabel1
-        } else if numberLabel1 == String(firstNumber) {
-            nextNumber = 9
-            numberLabel2 += numbers[9]
-            resultLabel.text = numberLabel2
-        }
     }
 }
