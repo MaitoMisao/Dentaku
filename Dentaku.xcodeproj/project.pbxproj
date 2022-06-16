@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A6DB58FE285AB60A005D8B05 /* CalcEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6DB58FD285AB60A005D8B05 /* CalcEngine.swift */; };
-		A6DB5906285AB938005D8B05 /* com_mina_Dentaku.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6DB5905285AB938005D8B05 /* com_mina_Dentaku.swift */; };
+		A6DB5906285AB938005D8B05 /* DentakuTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6DB5905285AB938005D8B05 /* DentakuTest.swift */; };
 		B06030E52842057000FCAC8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06030E42842057000FCAC8D /* AppDelegate.swift */; };
 		B06030E72842057000FCAC8D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06030E62842057000FCAC8D /* SceneDelegate.swift */; };
 		B06030E92842057000FCAC8D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06030E82842057000FCAC8D /* ViewController.swift */; };
@@ -29,8 +29,8 @@
 
 /* Begin PBXFileReference section */
 		A6DB58FD285AB60A005D8B05 /* CalcEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcEngine.swift; sourceTree = "<group>"; };
-		A6DB5903285AB938005D8B05 /* com.mina.Dentaku.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = com.mina.Dentaku.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A6DB5905285AB938005D8B05 /* com_mina_Dentaku.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = com_mina_Dentaku.swift; sourceTree = "<group>"; };
+		A6DB5903285AB938005D8B05 /* DentakuTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DentakuTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6DB5905285AB938005D8B05 /* DentakuTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DentakuTest.swift; sourceTree = "<group>"; };
 		B06030E12842057000FCAC8D /* Dentaku.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dentaku.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B06030E42842057000FCAC8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B06030E62842057000FCAC8D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,19 +59,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A6DB5904285AB938005D8B05 /* com.mina.Dentaku */ = {
+		A6DB5904285AB938005D8B05 /* DentakuTest */ = {
 			isa = PBXGroup;
 			children = (
-				A6DB5905285AB938005D8B05 /* com_mina_Dentaku.swift */,
+				A6DB5905285AB938005D8B05 /* DentakuTest.swift */,
 			);
-			path = com.mina.Dentaku;
+			path = DentakuTest;
 			sourceTree = "<group>";
 		};
 		B06030D82842057000FCAC8D = {
 			isa = PBXGroup;
 			children = (
 				B06030E32842057000FCAC8D /* Dentaku */,
-				A6DB5904285AB938005D8B05 /* com.mina.Dentaku */,
+				A6DB5904285AB938005D8B05 /* DentakuTest */,
 				B06030E22842057000FCAC8D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -80,7 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				B06030E12842057000FCAC8D /* Dentaku.app */,
-				A6DB5903285AB938005D8B05 /* com.mina.Dentaku.xctest */,
+				A6DB5903285AB938005D8B05 /* DentakuTest.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -103,9 +103,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A6DB5902285AB938005D8B05 /* com.mina.Dentaku */ = {
+		A6DB5902285AB938005D8B05 /* DentakuTest */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A6DB5909285AB938005D8B05 /* Build configuration list for PBXNativeTarget "com.mina.Dentaku" */;
+			buildConfigurationList = A6DB5909285AB938005D8B05 /* Build configuration list for PBXNativeTarget "DentakuTest" */;
 			buildPhases = (
 				A6DB58FF285AB938005D8B05 /* Sources */,
 				A6DB5900285AB938005D8B05 /* Frameworks */,
@@ -116,9 +116,9 @@
 			dependencies = (
 				A6DB5908285AB938005D8B05 /* PBXTargetDependency */,
 			);
-			name = com.mina.Dentaku;
+			name = DentakuTest;
 			productName = com.mina.Dentaku;
-			productReference = A6DB5903285AB938005D8B05 /* com.mina.Dentaku.xctest */;
+			productReference = A6DB5903285AB938005D8B05 /* DentakuTest.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		B06030E02842057000FCAC8D /* Dentaku */ = {
@@ -171,7 +171,7 @@
 			projectRoot = "";
 			targets = (
 				B06030E02842057000FCAC8D /* Dentaku */,
-				A6DB5902285AB938005D8B05 /* com.mina.Dentaku */,
+				A6DB5902285AB938005D8B05 /* DentakuTest */,
 			);
 		};
 /* End PBXProject section */
@@ -201,7 +201,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A6DB5906285AB938005D8B05 /* com_mina_Dentaku.swift in Sources */,
+				A6DB5906285AB938005D8B05 /* DentakuTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,7 +457,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A6DB5909285AB938005D8B05 /* Build configuration list for PBXNativeTarget "com.mina.Dentaku" */ = {
+		A6DB5909285AB938005D8B05 /* Build configuration list for PBXNativeTarget "DentakuTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A6DB590A285AB938005D8B05 /* Debug */,
