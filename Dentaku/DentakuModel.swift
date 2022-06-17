@@ -17,21 +17,21 @@ struct DentakuModel {
     
     // 足し算のメソッド
     func plusMethod(firstNumber x: Double, nextNumber y: Double) -> String {
-        return String(x + y)
+        return String(format: "%.0f", x + y)
     }
     
     // 引き算のメソッド
-    func minusMethod(firstNumber x: Int, nextNumber y: Int) -> String {
-        return String(x - y)
+    func minusMethod(firstNumber x: Double, nextNumber y: Double) -> String {
+        return String(format: "%.0f", x - y)
     }
     
     // 掛け算のメソッド
-    func timesMethod(firstNumber x: Int, nextNumber y: Int) -> String {
-        return String(x * y)
+    func timesMethod(firstNumber x: Double, nextNumber y: Double) -> String {
+        return String(format: "%.0f", x * y)
     }
     // 割り算のメソッド
-    func divideMethod(firstNumber x: Int, nextNumber y: Int) -> String {
-        return String(x / y)
+    func divideMethod(firstNumber x: Double, nextNumber y: Double) -> String {
+        return String(format: "%.0f", x / y)
     }
 }
 
