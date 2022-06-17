@@ -2,41 +2,34 @@
 //  ViewController.swift
 //  Dentaku
 //
-//  Created by Mina on 2022/05/28.
-//
 
 import UIKit
 
 class ViewController: UIViewController {
     
-    // 四則演算を行うときの状態
-    enum Status {
-        case plus
-        case minus
-        case times
-        case divide
-        case none
-    }
         
     @IBOutlet weak var resultLabel: UILabel!
     
     
     let numbers: Array<String> = ["0","1","2","3","4","5","6","7","8","9"]
     
-    var status: Status = .none
+    var status: DentakuModel.Status = .none
     
     // １番目の入力値ラベル
     var numberLabel1: String = ""
     // 2番目の入力値ラベル
     var numberLabel2: String = ""
     
-    var resultTotalString: String?
+    // var resultTotalString: String?
     
     // 最初の入力値
     var firstNumber: Double = 0.0
+    //var firstNumber: Int = 0
     // 入力後の次の入力値
     var nextNumber: Double = 0.0
+    //var nextNumber: Int = 0
     
+    var pointMode: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,19 +46,19 @@ class ViewController: UIViewController {
             return
         }
     }
-    
+    /* 
     func notResult() {
         return
     }
+    */
     
-    
-    func alreadyInmputFirstNuber() {
+    func alreadyImputFirstNuber() {
         // 1回目の入力値が既に入っていた場合、notInputが走る
         if numberLabel1 == "" {
-            notInput()
+            return
+        } else {
+            numberLabel1 = String(firstNumber)
         }
-        
-        numberLabel1 = String(firstNumber)
     }
     
     // MARK: functionButtons
@@ -83,6 +76,7 @@ class ViewController: UIViewController {
         switch status {
         case .plus:
             resultLabel.text = String(firstNumber + nextNumber)
+            //firstNumber = firstNumber + nextNumber
         case .minus:
             resultLabel.text = String(firstNumber - nextNumber)
         case .times:
@@ -96,29 +90,61 @@ class ViewController: UIViewController {
     }
     
     @IBAction func plusButton(_ sender: Any) {
-        alreadyInmputFirstNuber()
+        alreadyImputFirstNuber()
         status = .plus
+//        if resultLabel.text == String(firstNumber) {
+//
+//        }
     }
     
     @IBAction func minusButton(_ sender: Any) {
-        alreadyInmputFirstNuber()
+        alreadyImputFirstNuber()
         status = .minus
     }
     @IBAction func timesButton(_ sender: Any) {
-        alreadyInmputFirstNuber()
+        alreadyImputFirstNuber()
         status = .times
     }
     
     @IBAction func divideButton(_ sender: Any) {
-        alreadyInmputFirstNuber()
+        alreadyImputFirstNuber()
         status = .divide
     }
     
     // 小数点
     @IBAction func pointButton(_ sender: Any) {
+        // true falseと交互になる
+        pointMode = !pointMode
+        if pointMode {
+            resultLabel.text = String(format: "%.0f", firstNumber) + "."
+        }
     }
     
     // MARK: numbersButton
+    @IBAction func numeric(_ sender: Any) {
+//        if let button = sender as? UIButton {
+//            print("tag-\(button.tag)")
+//            // 小数点の実装は不十分
+//            if pointMode {
+//                let decimal = firstNumber - floor(firstNumber)
+//                var i = 1
+//                var x = decimal
+//                print("decimal-\(decimal)")
+//                while x > 0.0 {
+//                    x = x * 10 - floor(x * 10)
+//                    i += i
+//                }
+//                firstNumber = floor(firstNumber) + decimal + Double(button.tag) / pow(10.0, Double(i))
+//                resultLabel.text = String(format: "%f", firstNumber)
+//            } else {
+//                firstNumber *= Double(10)
+//                firstNumber += Double(button.tag)
+//                resultLabel.text = String(format: "%.0f", firstNumber)
+//            }
+//        }
+    }
+    
+    #if false
     @IBAction func zero(_ sender: Any) {
         if numberLabel1 == "" {
             firstNumber = 0
@@ -238,4 +264,5 @@ class ViewController: UIViewController {
             resultLabel.text = numberLabel2
         }
     }
+    #endif
 }
